@@ -1,0 +1,26 @@
+train:
+    batch_size: 16
+    lr: 0.001
+    pt_lr: 0.0001
+    max_epoch: 15
+    epoch_stop: 5
+    eval_epoch: 0
+    seed: 2024
+    weight_decay: 1e-8
+    lam1: 0.5
+    lam2: 0.5
+eval:
+    batch_size: 32
+    eval_max_len: 80
+    eval_min_len: 24
+    top_k: 30
+    top_p: 0.9
+    num_beams: 1
+    temperature: 0.7
+    repetition_penalty: 1.03
+    no_repeat_ngram_size: 3
+
+name: "exp_test"
+GPU_id: "cuda:0"
+pretrain_path: '.\dataset\Pretrain'
+data_path: '.\dataset\FakeVE'
